@@ -6,7 +6,15 @@ import { ContactDetail } from '../../components/ContactDetail'
 import { getContactsAPI, getFilterContactsAPI } from '../../api/user'
 import { Pagination } from '../../components/Pagination'
 
-
+interface ContactDetailProps {
+    selectData: {
+        id: string
+        first_name: string;
+        last_name: string;
+        email: string;
+        phone: string;
+    }
+}
 
 export const ContactPage:React.FC = () => {
     console.count('Contact page called');
